@@ -79,11 +79,21 @@
             margin-bottom: 8px;
             font-size: 1rem;
         }
-        .address { margin-bottom: 6px; color: #333; font-size: 1rem; }
-        .email { color: #333; text-decoration: none; font-size: 1rem; }
-        .email:hover { color: #8a7e52; }
-        .twitter a { color: #333; text-decoration: none; font-size: 1rem; }
-        .twitter a:hover { color: #8a7e52; }
+
+        /* Contact block */
+
+        /* Color only the links, not the labels */
+
+        
+       .address { margin: 0; }
+.contact-section .email-line { margin-top: 8px; }
+.contact-section .twitter { margin-top: 6px; }
+
+        
+        .email { color: #8a7e52; text-decoration: none; }
+.email:hover { text-decoration: underline; }
+.twitter a { color: #8a7e52; text-decoration: none; }
+.twitter a:hover { text-decoration: underline; }
 
         .intro {
             font-size: 1rem;
@@ -148,7 +158,7 @@
             <a href="index.html" class="nav-link active">Home</a>
             <a href="research.html" class="nav-link">Research</a>
             <a href="teaching.html" class="nav-link">Teaching</a>
-            <a href="outreach.html" class="nav-link">Outreach</a> <!-- 4) Added Outreach -->
+            <a href="outreach.html" class="nav-link">Outreach</a>
         </nav>
     </header>
 
@@ -158,26 +168,29 @@
             <div class="photo-section">
                 <img src="photo.JPG" alt="Bishal K Chalise" class="profile-photo">
             </div>
+
             <div class="contact-section">
-    <div class="contact-title">CONTACT:</div>
+                <div class="contact-title">CONTACT:</div>
 
-    <!-- address lines with no gap -->
-    <div class="address">Deakin University, Melbourne Burwood Campus</div>
-    <div class="address">EA Building, Level 1, Burwood, Victoria 3125</div>
+                <!-- address lines with no gap -->
+                <div class="address">Deakin University, Melbourne Burwood Campus</div>
+                <div class="address">EA Building, Level 1, Burwood, Victoria 3125</div>
 
-    <!-- email with label -->
-    <div class="email-line" style="margin-top:8px;">
-        <span style="color:#8a7e52; font-weight:500;">Email:</span>
-        <a href="mailto:b.chalise@deakin.edu.au" class="email">b.chalise@deakin.edu.au</a>
-    </div>
+                <!-- email with default label and colored link -->
+                <div class="email-line">
+                    <span>Email:</span>
+                    <a href="mailto:b.chalise@deakin.edu.au" class="email">b.chalise@deakin.edu.au</a>
+                </div>
 
-    <!-- twitter with label -->
-    <div class="twitter" style="margin-top:6px;">
-        <span style="color:#8a7e52; font-weight:500;">Twitter:</span>
-        <a href="https://twitter.com/bishalkchalise" target="_blank" rel="noopener">@bishalkchalise</a>
-    </div>
+                <!-- twitter with default label and colored handle -->
+                <div class="twitter">
+                    <span>Twitter:</span>
+                    <a href="https://twitter.com/bishalkchalise" target="_blank" rel="noopener">@bishalkchalise</a>
+                </div>
+            </div>
+        </div>
 
-        <!-- Right column: introduction  -->
+        <!-- Right column: introduction -->
         <div class="right-column">
             <div class="intro">
                 Hello! I am a third year PhD candidate at Deakin University.
@@ -189,7 +202,7 @@
                 </div>
             </div>
 
-            <!-- CV  -->
+            <!-- CV -->
             <p class="cv-note">
                 You can find my <a href="https://www.dropbox.com/s/your-cv-file.pdf?dl=0" target="_blank" rel="noopener">CV</a> here.
             </p>
