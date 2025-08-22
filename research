@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bishal K Chalise - Research</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .name {
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: #a0956b;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .divider {
+            width: 80px;
+            height: 3px;
+            background-color: #a0956b;
+            margin: 20px auto 30px auto;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #666;
+            font-size: 1.1rem;
+            font-weight: 400;
+            padding: 8px 16px;
+            transition: color 0.3s ease;
+            text-transform: capitalize;
+        }
+
+        .nav-link:hover {
+            color: #a0956b;
+        }
+
+        .nav-link.active {
+            color: #a0956b;
+            font-weight: 500;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            color: #a0956b;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        .page-divider {
+            width: 60px;
+            height: 2px;
+            background-color: #a0956b;
+            margin: 0 auto 50px auto;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            color: #333;
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .paper {
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .paper-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+            text-decoration: underline;
+        }
+
+        .paper-title a {
+            color: #333;
+            text-decoration: underline;
+        }
+
+        .paper-title a:hover {
+            color: #a0956b;
+        }
+
+        .paper-details {
+            color: #555;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .paper-links {
+            margin-top: 8px;
+        }
+
+        .paper-links a {
+            color: #333;
+            text-decoration: underline;
+            margin-right: 15px;
+        }
+
+        .paper-links a:hover {
+            color: #a0956b;
+        }
+
+        .coauthor {
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .name {
+                font-size: 2.5rem;
+            }
+            
+            .navigation {
+                gap: 25px;
+            }
+            
+            .nav-link {
+                font-size: 1rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="name">Bishal K Chalise</h1>
+            <div class="divider"></div>
+            <nav class="navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="research.html" class="nav-link active">Research</a>
+                <a href="cv.html" class="nav-link">CV</a>
+                <a href="teaching.html" class="nav-link">Teaching</a>
+            </nav>
+        </header>
+
+        <main class="content">
+            <h2 class="page-title">Research</h2>
+            <div class="page-divider"></div>
+            
+            <section class="section">
+                <h3 class="section-title">Working projects</h3>
+                
+             
+                
+                <div class="paper">
+                    <div class="paper-title">Local Politics and (mis)allocation of public resoruces</div>
+                    <div class="paper-details"><span class="coauthor">Abstract</span></div>
+                    <div class="paper-details">Partisan bias favoring local politicians aligned with the ruling party can lead to public resource misallocation, yet the distributional consequences of such bias remain unclear. We examine this question using Nepal's post-earthquake housing reconstruction program. Employing a close-election regression discontinuity design with comprehensive administrative data of nearly one million household records and 2.3 million grant payment records, we demonstrate that ruling-party-aligned local politicians deliver substantially more aid than opposition-aligned counterparts. Ruling politicians enroll 40 percent more new beneficiaries, with effects concentrated in areas with greatest reconstruction demand: poor rural regions and earthquake-damaged locations. This redistribution operates through the program's grievance redressal system, which grants local politicians discretionary power to respond to affected households' needs. While incumbent candidates and their parties receive higher vote shares in subsequent elections as a reward, this electoral benefit is insufficient to affect re-election likelihood.</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3 class="section-title">Publication</h3>
+                
+                <div class="paper">
+                    <div class="paper-title">You Get What You Pay For: Electricity Quality and Firm Response</div>
+                    <div class="paper-details">Revise and Resubmit at <em>Economic Development and Cultural Change</em></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
