@@ -1,218 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bishal K Chalise - Research</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bishal K Chalise - Research</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #ffffff;
-        }
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #ffffff;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+    /* 2) small grey name top-left */
+    .site-name {
+      font-size: 1rem;
+      font-weight: 300;
+      color: #888;   /* dim grey but visible */
+      position: absolute;
+      top: 15px;
+      left: 20px;
+    }
 
-        .name {
-            font-size: 3.5rem;
-            font-weight: 300;
-            color: #a0956b;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-        }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
 
-        .divider {
-            width: 80px;
-            height: 3px;
-            background-color: #a0956b;
-            margin: 20px auto 30px auto;
-        }
+    /* 1) Big page title */
+    .page-title {
+      font-size: 2.5rem;
+      color: #5a5335; /* darker than #a0956b */
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
 
-        .navigation {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 50px;
-            flex-wrap: wrap;
-        }
+    .divider {
+      width: 80px;
+      height: 3px;
+      background-color: #5a5335;
+      margin: 20px auto 30px auto;
+    }
 
-        .nav-link {
-            text-decoration: none;
-            color: #666;
-            font-size: 1.1rem;
-            font-weight: 400;
-            padding: 8px 16px;
-            transition: color 0.3s ease;
-            text-transform: capitalize;
-        }
+    .navigation {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+    }
 
-        .nav-link:hover {
-            color: #a0956b;
-        }
+    .nav-link {
+      text-decoration: none;
+      color: #666;
+      font-size: 1.1rem;
+      font-weight: 400;
+      padding: 8px 16px;
+      transition: color 0.3s ease;
+      text-transform: capitalize;
+    }
+    .nav-link:hover { color: #5a5335; }
+    .nav-link.active { color: #5a5335; font-weight: 500; }
 
-        .nav-link.active {
-            color: #a0956b;
-            font-weight: 500;
-        }
+    .content { max-width: 800px; margin: 0 auto; }
 
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    .section { margin-bottom: 50px; }
 
-        .page-title {
-            font-size: 2.5rem;
-            color: #a0956b;
-            margin-bottom: 20px;
-            text-align: center;
-            font-weight: 300;
-        }
+    .section-title {
+      color: #333;
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
 
-        .page-divider {
-            width: 60px;
-            height: 2px;
-            background-color: #a0956b;
-            margin: 0 auto 50px auto;
-        }
+    .paper { margin-bottom: 30px; line-height: 1.6; }
 
-        .section {
-            margin-bottom: 50px;
-        }
+    /* 4) Paper titles bold only */
+    .paper-title {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 5px;
+    }
 
-        .section-title {
-            color: #333;
-            font-size: 1.4rem;
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
+    .paper-title a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .paper-title a:hover { color: #5a5335; }
 
-        .paper {
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
+    .paper-details {
+      color: #555;
+      margin-bottom: 8px;
+    }
 
-        .paper-title {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 5px;
-            text-decoration: underline;
-        }
+    .coauthor { font-style: italic; }
 
-        .paper-title a {
-            color: #333;
-            text-decoration: underline;
-        }
+    /* Citation style */
+    .citation {
+      font-size: 0.95rem;
+      color: #444;
+    }
+    .citation i { font-style: italic; }
 
-        .paper-title a:hover {
-            color: #a0956b;
-        }
-
-        .paper-details {
-            color: #555;
-            font-style: italic;
-            margin-bottom: 8px;
-        }
-
-        .paper-links {
-            margin-top: 8px;
-        }
-
-        .paper-links a {
-            color: #333;
-            text-decoration: underline;
-            margin-right: 15px;
-        }
-
-        .paper-links a:hover {
-            color: #a0956b;
-        }
-
-        .coauthor {
-            font-style: italic;
-        }
-
-        @media (max-width: 768px) {
-            .name {
-                font-size: 2.5rem;
-            }
-            
-            .navigation {
-                gap: 25px;
-            }
-            
-            .nav-link {
-                font-size: 1rem;
-            }
-            
-            .container {
-                padding: 20px 15px;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .page-title { font-size: 2rem; }
+      .navigation { gap: 25px; }
+      .nav-link { font-size: 1rem; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1 class="name">Bishal K Chalise</h1>
-            <div class="divider"></div>
-            <nav class="navigation">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="research.html" class="nav-link active">Research</a>
-                <a href="cv.html" class="nav-link">CV</a>
-                <a href="teaching.html" class="nav-link">Teaching</a>
-            </nav>
-        </header>
+  <div class="container">
+    <header class="header">
+      <!-- 2) Small site name top-left -->
+      <div class="site-name">Bishal K Chalise</div>
 
-        <main class="content">
-            <h2 class="page-title">Research</h2>
-            <div class="page-divider"></div>
-            
-            <section class="section">
-                <h3 class="section-title">Working projects</h3>
-                
-             
-                
-                <div class="paper">
-                    <div class="paper-title">Local Politics and (mis)allocation of public resoruces</div>
-                    <div class="paper-details"><span class="coauthor">Abstract</span></div>
-                    <div class="paper-details">Partisan bias favoring local politicians aligned with the ruling party can lead to public resource misallocation, yet the distributional consequences of such bias remain unclear. We examine this question using Nepal's post-earthquake housing reconstruction program. Employing a close-election regression discontinuity design with comprehensive administrative data of nearly one million household records and 2.3 million grant payment records, we demonstrate that ruling-party-aligned local politicians deliver substantially more aid than opposition-aligned counterparts. Ruling politicians enroll 40 percent more new beneficiaries, with effects concentrated in areas with greatest reconstruction demand: poor rural regions and earthquake-damaged locations. This redistribution operates through the program's grievance redressal system, which grants local politicians discretionary power to respond to affected households' needs. While incumbent candidates and their parties receive higher vote shares in subsequent elections as a reward, this electoral benefit is insufficient to affect re-election likelihood.</div>
-                </div>
+      <!-- 1) Big page title -->
+      <h1 class="page-title">Research</h1>
+      <div class="divider"></div>
 
-              <div class="paper">
-                    <div class="paper-title">Devolution, Diversity and Disorder</div>
-                    <div class="paper-details"><span class="coauthor">Abstract</span></div>
-                    <div class="paper-details">Political boundaries, as human artifacts, could shape deep-rooted social behaviors and identities. I utilise the merger of municipality boundaries that exogenously altered the ethnic divisions to examine the effect on social tension and conflict events. I find that areas with change in ethnic diversity, measured with polarisation saw increased instances of violence post-merger by as much as hundred percent and take a U-shape, meaning violence subdues after few years. However, areas with the strong social network witnessed reduced conflicts by as much as 5-20 percent. The paper provides suggestive evidence that alternative social platform that transcends ethnic groups and provides common economic benefits might be instrumental in moderating ethnic tension and potential to create peace.</div>
-                </div>
+      <!-- 3) Updated navigation -->
+      <nav class="navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="research.html" class="nav-link active">Research</a>
+        <a href="teaching.html" class="nav-link">Teaching</a>
+        <a href="outreach.html" class="nav-link">Outreach</a>
+      </nav>
+    </header>
 
-                
-            </section>
+    <main class="content">
+      <section class="section">
+        <h3 class="section-title">Working Projects</h3>
 
-            <section class="section">
-                <h3 class="section-title">Publication</h3>
-                
-                <div class="paper">
-                    <div class="paper-title">Where is my reusable bag? Retailers’ bag use before and after the plastic bag ban in Dharan Municipality of Nepal</div>
-                    <div class="paper-details"><span class="coauthor">with Bishal Bharadwaj and Mukti Nath Subedi  </span></div>
-                    <div class="paper-details">Waste Management, Volume 120, 1 February 2021, Pages 494-502</em></div>
-                </div>
-            </section>
-        </main>
-    </div>
+        <div class="paper">
+          <div class="paper-title">Local Politics and (mis)allocation of public resources</div>
+          <div class="paper-details"><span class="coauthor">Abstract</span></div>
+          <div class="paper-details">
+            Partisan bias favoring local politicians aligned with the ruling party can lead to public resource misallocation, yet the distributional consequences of such bias remain unclear. We examine this question using Nepal's post-earthquake housing reconstruction program. Employing a close-election regression discontinuity design with comprehensive administrative data of nearly one million household records and 2.3 million grant payment records, we demonstrate that ruling-party-aligned local politicians deliver substantially more aid than opposition-aligned counterparts. Ruling politicians enroll 40 percent more new beneficiaries, with effects concentrated in areas with greatest reconstruction demand: poor rural regions and earthquake-damaged locations. This redistribution operates through the program's grievance redressal system, which grants local politicians discretionary power to respond to affected households' needs. While incumbent candidates and their parties receive higher vote shares in subsequent elections as a reward, this electoral benefit is insufficient to affect re-election likelihood.
+          </div>
+        </div>
+
+        <div class="paper">
+          <div class="paper-title">Devolution, Diversity and Disorder</div>
+          <div class="paper-details"><span class="coauthor">Abstract</span></div>
+          <div class="paper-details">
+            Political boundaries, as human artifacts, could shape deep-rooted social behaviors and identities. I utilise the merger of municipality boundaries that exogenously altered the ethnic divisions to examine the effect on social tension and conflict events. I find that areas with change in ethnic diversity, measured with polarisation, saw increased instances of violence post-merger by as much as 100 percent and take a U-shape, meaning violence subdues after few years. However, areas with strong social networks witnessed reduced conflicts by as much as 5–20 percent. The paper provides suggestive evidence that alternative social platforms that transcend ethnic groups and provide common economic benefits might be instrumental in moderating ethnic tension and fostering peace.
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3 class="section-title">Publication</h3>
+
+        <div class="paper">
+          <!-- 5) Hyperlinked title -->
+          <div class="paper-title">
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0956053X20305900" target="_blank" rel="noopener">
+              Where is my reusable bag? Retailers’ bag use before and after the plastic bag ban in Dharan Municipality of Nepal
+            </a>
+          </div>
+          <div class="paper-details"><span class="coauthor">with Bishal Bharadwaj and Mukti Nath Subedi</span></div>
+
+          <!-- 6) Formal citation style -->
+          <div class="citation">
+            <i>Waste Management</i>, Vol. 120, pp. 494–502, February 2021.
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
