@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bishal K Chalise</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Roboto', 'Arial', sans-serif;
@@ -18,29 +14,24 @@
             background-color: #ffffff;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
 
-        .header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+        .header { text-align: center; margin-bottom: 50px; }
 
+        /* 1) Name slightly bolder + darker */
         .name {
             font-size: 3.5rem;
-            font-weight: 300;
-            color: #a0956b;
+            font-weight: 500;            /* was 300 */
+            color: #8a7e52;              /* darker than #a0956b */
             margin-bottom: 20px;
             letter-spacing: 1px;
         }
 
+        /* 2) Divider longer + same darker color */
         .divider {
-            width: 80px;
+            width: 120px;                /* was 80px */
             height: 3px;
-            background-color: #a0956b;
+            background-color: #8a7e52;   /* match .name color */
             margin: 20px auto 30px auto;
         }
 
@@ -61,46 +52,38 @@
             transition: color 0.3s ease;
             text-transform: capitalize;
         }
-
-        .nav-link:hover {
-            color: #a0956b;
-        }
-
-        .nav-link.active {
-            color: #a0956b;
-            font-weight: 500;
-        }
+        .nav-link:hover { color: #8a7e52; }
+        .nav-link.active { color: #8a7e52; font-weight: 500; }
 
         .main-content {
-    display: flex;               /* side-by-side layout */
-    gap: 40px;                   /* space between photo and text */
-    align-items: flex-start;     /* align top of text with top of photo */
-}
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
 
-.left-column {
-    flex: 0 0 350px;             /* fix width of left column (photo/contact) */
-}
+        /* Give the photo room to be large if desired */
+        .left-column { flex: 0 0 550px; }        /* was 350px */
+        .profile-photo {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            border-radius: 8px;
+        }
 
-.profile-photo {
-    width: 100%;                 /* make image fill left column width */
-    max-width: 550px;            /* enlarge up to 550px */
-    height: auto;                /* maintain aspect ratio */
-    border-radius: 8px;          /* optional rounded corners */
-}
+        .right-column { flex: 1; }
 
-.right-column {
-    flex: 1;                     /* take up remaining space */
-}
-
-.contact-section {
-    margin-top: 20px;
-}
-
-.cv-link {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
+        .contact-section { margin-top: 20px; }
+        .contact-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        .address { margin-bottom: 6px; color: #333; font-size: 1rem; }
+        .email { color: #333; text-decoration: none; font-size: 1rem; }
+        .email:hover { color: #8a7e52; }
+        .twitter a { color: #333; text-decoration: none; font-size: 1rem; }
+        .twitter a:hover { color: #8a7e52; }
 
         .intro {
             font-size: 1rem;
@@ -110,98 +93,28 @@
             color: #444;
         }
 
-        .research-section {
-            margin-bottom: 25px;
-        }
-
-        .research-title {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 12px;
-            font-size: 1rem;
-        }
-
+        .research-section { margin-bottom: 16px; }
         .research-content {
             font-size: 1rem;
             line-height: 1.7;
             text-align: justify;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
             color: #444;
         }
 
-        .research-highlight {
-            font-weight: 600;
-            color: #333;
-        }
-
-        .future-research {
-            font-size: 1rem;
-            line-height: 1.7;
-            text-align: justify;
-            margin-bottom: 25px;
-            color: #444;
-        }
-
-        
-
-        .contact-title {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 8px;
+        /* 5) CV note styling */
+        .cv-note {
+            margin-top: 14px;
             font-size: 1rem;
         }
-
-        .email {
-            color: #333;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-
-        .email:hover {
-            color: #a0956b;
-        }
-
-        .cv-link {
-            display: block;
-            color: #333;
+        .cv-note a {
+            color: #8a7e52;
             text-decoration: none;
             font-weight: 600;
-            margin: 15px 0;
-            font-size: 1rem;
         }
+        .cv-note a:hover { text-decoration: underline; }
 
-        .cv-link:hover {
-            color: #a0956b;
-        }
-
-        .announcement {
-            margin: 25px 0;
-            line-height: 1.7;
-        }
-
-        .announcement-title {
-            color: #333;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .announcement-content {
-            font-size: 1rem;
-            line-height: 1.7;
-            text-align: justify;
-            color: #444;
-        }
-
-        .announcement-content a {
-            color: #4285f4;
-            text-decoration: none;
-        }
-
-        .announcement-content a:hover {
-            text-decoration: underline;
-        }
-
-        /* Placeholder for profile photo */
+        /* Optional placeholder style (kept) */
         .photo-placeholder {
             width: 100%;
             height: 330px;
@@ -217,80 +130,65 @@
         }
 
         @media (max-width: 768px) {
-            .name {
-                font-size: 2.5rem;
-            }
-            
-            .navigation {
-                gap: 25px;
-            }
-            
-            .nav-link {
-                font-size: 1rem;
-            }
-            
-            .main-content {
-                flex-direction: column;
-                gap: 30px;
-            }
-
-            .photo-section {
-                flex: none;
-                max-width: 250px;
-                margin: 0 auto;
-            }
-
-            .content-section {
-                padding-left: 0;
-            }
-            
-            .container {
-                padding: 20px 15px;
-            }
+            .name { font-size: 2.5rem; }
+            .navigation { gap: 25px; }
+            .nav-link { font-size: 1rem; }
+            .main-content { flex-direction: column; gap: 30px; }
+            .left-column { flex: none; max-width: 300px; margin: 0 auto; }  /* mobile-friendly */
+            .container { padding: 20px 15px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1 class="name">Bishal K Chalise</h1>
-            <div class="divider"></div>
-            <nav class="navigation">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="research.html" class="nav-link">Research</a>
-                <a href="cv.html" class="nav-link">CV</a>
-                <a href="teaching.html" class="nav-link">Teaching</a>
-            </nav>
-        </header>
+<div class="container">
+    <header class="header">
+        <h1 class="name">Bishal K Chalise</h1>
+        <div class="divider"></div>
+        <nav class="navigation">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="research.html" class="nav-link">Research</a>
+            <a href="teaching.html" class="nav-link">Teaching</a>
+            <a href="outreach.html" class="nav-link">Outreach</a> <!-- 4) Added Outreach -->
+        </nav>
+    </header>
 
-        <div class="main-content">
-            <!-- Left column: photo + contact -->
-            <div class="left-column">
-                <div class="photo-section">
-                    <img src="photo.JPG" alt="Bishal K Chalise" class="profile-photo">
-                </div>
-                <div class="contact-section">
-                    <div class="contact-title">CONTACT:</div>
-                    <a href="mailto:b.chalise@deakin.edu.au" class="email">b.chalise@deakin.edu.au</a><br>
-                    <a href="cv.html" class="cv-link">CV</a><br>
-                    <!-- Space for additional addresses later -->
-                    <div class="address">Deakin University, Melbourne, Australia</div>
-                </div>
+    <div class="main-content">
+        <!-- Left column: photo + contact -->
+        <div class="left-column">
+            <div class="photo-section">
+                <img src="photo.JPG" alt="Bishal K Chalise" class="profile-photo">
             </div>
-
-            <!-- Right column: intro + research -->
-            <div class="right-column">
-                <div class="intro">
-                    Hello! I am a third year PhD candidate at Deakin University. 
-                </div>
-
-                <div class="research-section">
-                    <div class="research-content">
-                        My research examines how institutional structures and political incentives shape developmental outcomes. I focus on two main themes: first, the ways in which political incentives influence the provision and delivery of public services. For instance, my current work shows how local politicians affect post-earthquake reconstruction and how these influences can be constrained through effective program design. Second, I study how institutional design itself can generate unintended consequences, such as social conflict.
-                    </div>
+            <div class="contact-section">
+                <div class="contact-title">CONTACT:</div>
+                <!-- 3) Address first -->
+                <div class="address">Deakin University, Melbourne, Australia</div>
+                <!-- then email -->
+                <a href="mailto:b.chalise@deakin.edu.au" class="email">b.chalise@deakin.edu.au</a><br>
+                <!-- then Twitter -->
+                <div class="twitter">
+                    <a href="https://twitter.com/bishalkchalise" target="_blank" rel="noopener">@bishalkchalise</a>
                 </div>
             </div>
         </div>
+
+        <!-- Right column: intro + research -->
+        <div class="right-column">
+            <div class="intro">
+                Hello! I am a third year PhD candidate at Deakin University.
+            </div>
+
+            <div class="research-section">
+                <div class="research-content">
+                    My research examines how institutional structures and political incentives shape developmental outcomes. I focus on two main themes: first, the ways in which political incentives influence the provision and delivery of public services. For instance, my current work shows how local politicians affect post-earthquake reconstruction and how these influences can be constrained through effective program design. Second, I study how institutional design itself can generate unintended consequences, such as social conflict.
+                </div>
+            </div>
+
+            <!-- 5) CV line below the paragraph -->
+            <p class="cv-note">
+                You can find my <a href="https://www.dropbox.com/s/your-cv-file.pdf?dl=0" target="_blank" rel="noopener">CV here</a>.
+            </p>
+        </div>
     </div>
+</div>
 </body>
 </html>
