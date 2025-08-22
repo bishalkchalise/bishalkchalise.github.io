@@ -72,28 +72,35 @@
         }
 
         .main-content {
-            display: flex;
-            gap: 40px;
-            align-items: flex-start;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+    display: flex;               /* side-by-side layout */
+    gap: 40px;                   /* space between photo and text */
+    align-items: flex-start;     /* align top of text with top of photo */
+}
 
-        .photo-section {
-            flex: 0 0 280px;
-        }
+.left-column {
+    flex: 0 0 550px;             /* fix width of left column (photo/contact) */
+}
 
-        .profile-photo {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
+.profile-photo {
+    width: 100%;                 /* make image fill left column width */
+    max-width: 550px;            /* enlarge up to 550px */
+    height: auto;                /* maintain aspect ratio */
+    border-radius: 8px;          /* optional rounded corners */
+}
 
-        .content-section {
-            flex: 1;
-            padding-left: 20px;
-        }
+.right-column {
+    flex: 1;                     /* take up remaining space */
+}
+
+.contact-section {
+    margin-top: 20px;
+}
+
+.cv-link {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
 
         .intro {
             font-size: 1rem;
@@ -135,9 +142,7 @@
             color: #444;
         }
 
-        .contact-section {
-            margin: 25px 0;
-        }
+        
 
         .contact-title {
             font-weight: 600;
@@ -258,13 +263,23 @@
             </nav>
         </header>
 
-       <div class="main-content">
-    <div class="photo-section">
-        <img src="photo.JPG" alt="Bishal K Chalise" class="profile-photo">
-    </div>
-</div>
+        <div class="main-content">
+            <!-- Left column: photo + contact -->
+            <div class="left-column">
+                <div class="photo-section">
+                    <img src="photo.JPG" alt="Bishal K Chalise" class="profile-photo">
+                </div>
+                <div class="contact-section">
+                    <div class="contact-title">CONTACT:</div>
+                    <a href="mailto:b.chalise@deakin.edu.au" class="email">b.chalise@deakin.edu.au</a><br>
+                    <a href="cv.html" class="cv-link">CV</a><br>
+                    <!-- Space for additional addresses later -->
+                    <div class="address">Deakin University, Melbourne, Australia</div>
+                </div>
+            </div>
 
-            <div class="content-section">
+            <!-- Right column: intro + research -->
+            <div class="right-column">
                 <div class="intro">
                     Hello! I am a third year PhD candidate at Deakin University. 
                 </div>
@@ -272,21 +287,8 @@
                 <div class="research-section">
                     <div class="research-title">Research areas:</div>
                     <div class="research-content">
-                        My research examines institutional and political interactions shaping developmental outcomes. I focus on two themes: <span class="research-highlight">first, how political incentives influence public service provisioning and delivery. For example, my current work shows how local politicians tend to influence post-earthquake reconstruction, and how they are constraints with right program design.
+                        My research examines how institutional structures and political incentives shape developmental outcomes. I focus on two main themes: first, the ways in which political incentives influence the provision and delivery of public services. For instance, my current work shows how local politicians affect post-earthquake reconstruction and how these influences can be constrained through effective program design. Second, I study how institutional design itself can generate unintended consequences, such as fostering conflict.
                     </div>
-                    <div class="research-content">
-                        <span class="research-highlight">Second, I am interested in why institutional design may have unintended consequences, like conflicts. 
-                    </div>
-                </div>
-
-
-                <div class="contact-section">
-                    <div class="contact-title">CONTACT:</div>
-                    <a href="mailto:b.chalise@deakin.edu.au" class="email">b.chalise@deakin.edu.au</a>
-                </div>
-
-                <a href="cv.html" class="cv-link">CV</a>
-
                 </div>
             </div>
         </div>
