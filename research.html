@@ -21,14 +21,15 @@
     }
 
     /* 2) small grey name top-left */
-    .site-name {
-      font-size: 1rem;
-      font-weight: 300;
-      color: #888;   /* dim grey but visible */
-      position: absolute;
-      top: 15px;
-      left: 20px;
-    }
+.site-name {
+  font-size: 2rem;        /* double your current ~1rem */
+  font-weight: 300;       /* keep thin */
+  color: #666;            /* darker grey (vs #888) */
+  position: fixed;        /* pin to viewport */
+  top: 15px;
+  left: 20px;
+  z-index: 1000;          /* stays above other elements */
+}
 
     .header {
       text-align: center;
