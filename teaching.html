@@ -1,164 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bishal K Chalise - Teaching</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bishal K Chalise - Teaching</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #ffffff;
-        }
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #ffffff;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+    /* Top-left small name */
+    .site-name {
+      font-size: 1.5rem;
+      font-weight: 200;
+      color: #888;
+      position: fixed;
+      top: 15px;
+      left: 20px;
+      z-index: 1000;
+    }
 
-        .name {
-            font-size: 3.5rem;
-            font-weight: 300;
-            color: #a0956b;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-        }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
 
-        .divider {
-            width: 80px;
-            height: 3px;
-            background-color: #a0956b;
-            margin: 20px auto 30px auto;
-        }
+    /* Big page title */
+    .page-title {
+      font-size: 2.5rem;
+      color: #5a5335;   /* darker than #a0956b */
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
 
-        .navigation {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 50px;
-            flex-wrap: wrap;
-        }
+    .divider {
+      width: 80px;
+      height: 3px;
+      background-color: #5a5335;
+      margin: 20px auto 30px auto;
+    }
 
-        .nav-link {
-            text-decoration: none;
-            color: #666;
-            font-size: 1.1rem;
-            font-weight: 400;
-            padding: 8px 16px;
-            transition: color 0.3s ease;
-            text-transform: capitalize;
-        }
+    .navigation {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+    }
 
-        .nav-link:hover {
-            color: #a0956b;
-        }
+    .nav-link {
+      text-decoration: none;
+      color: #666;
+      font-size: 1.1rem;
+      font-weight: 400;
+      padding: 8px 16px;
+      transition: color 0.3s ease;
+      text-transform: capitalize;
+    }
+    .nav-link:hover { color: #5a5335; }
+    .nav-link.active { color: #5a5335; font-weight: 500; }
 
-        .nav-link.active {
-            color: #a0956b;
-            font-weight: 500;
-        }
+    .content { max-width: 800px; margin: 0 auto; }
 
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    .page-divider {
+      width: 60px;
+      height: 2px;
+      background-color: #5a5335;
+      margin: 0 auto 50px auto;
+    }
 
-        .page-title {
-            font-size: 2.5rem;
-            color: #a0956b;
-            margin-bottom: 20px;
-            text-align: center;
-            font-weight: 300;
-        }
+    .institution { margin-bottom: 30px; }
 
-        .page-divider {
-            width: 60px;
-            height: 2px;
-            background-color: #a0956b;
-            margin: 0 auto 50px auto;
-        }
+    .institution-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 15px;
+    }
 
-        .institution {
-            margin-bottom: 30px;
-        }
+    .course {
+      margin-bottom: 8px;
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
 
-        .institution-name {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .course {
-            margin-bottom: 8px;
-            color: #555;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-
-        @media (max-width: 768px) {
-            .name {
-                font-size: 2.5rem;
-            }
-            
-            .navigation {
-                gap: 25px;
-            }
-            
-            .nav-link {
-                font-size: 1rem;
-            }
-            
-            .container {
-                padding: 20px 15px;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .page-title { font-size: 2rem; }
+      .navigation { gap: 25px; }
+      .nav-link { font-size: 1rem; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1 class="name">Bishal K Chalise</h1>
-            <div class="divider"></div>
-            <nav class="navigation">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="research.html" class="nav-link">Research</a>
-                <a href="cv.html" class="nav-link">CV</a>
-                <a href="teaching.html" class="nav-link active">Teaching</a>
-            </nav>
-        </header>
+  <div class="container">
+    <header class="header">
+      <!-- top-left name -->
+      <div class="site-name">Bishal K Chalise</div>
 
-        <main class="content">
-            <h2 class="page-title">Teaching</h2>
-            <div class="page-divider"></div>
-            
-            <div class="institution">
-                <div class="institution-name">Graduate Research Teaching Fellow, Deakin University, Australia</div>
-                <div class="course">MAE101 - Economic Principles</div>
-                <div class="course">MAE214 - Economic Strategy for Business</div>
+      <!-- page title -->
+      <h1 class="page-title">Teaching</h1>
+      <div class="divider"></div>
 
-            </div>
+      <!-- updated navigation -->
+      <nav class="navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="teaching.html" class="nav-link active">Teaching</a>
+        <a href="outreach.html" class="nav-link">Outreach</a>
+      </nav>
+    </header>
 
-            <div class="institution">
-                <div class="institution-name">Lecturer, Tribhuvan University, Nepal</div>
+    <main class="content">
+      <div class="institution">
+        <div class="institution-name">Graduate Research Teaching Fellow, Deakin University, Australia</div>
+        <div class="course">MAE101 - Economic Principles</div>
+        <div class="course">MAE214 - Economic Strategy for Business</div>
+      </div>
 
-                <div class="course">MGT 203: Microeconomics</div>
-                <div class="course">MGT 202: Business Statistics </div>
-            </div>
-        </main>
-    </div>
+      <div class="institution">
+        <div class="institution-name">Lecturer, Tribhuvan University, Nepal</div>
+        <div class="course">MGT 203: Microeconomics</div>
+        <div class="course">MGT 202: Business Statistics</div>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
