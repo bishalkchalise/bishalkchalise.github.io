@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bishal K Chalise - Outreach</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #ffffff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* top-left subtle name (your preferred combo) */
+    .site-name {
+      font-size: 1.5rem;
+      font-weight: 200;
+      color: #888;
+      position: fixed;
+      top: 15px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    /* big page title */
+    .page-title {
+      font-size: 2.5rem;
+      color: #5a5335;   /* darker bronze */
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    .divider {
+      width: 80px;
+      height: 3px;
+      background-color: #5a5335;
+      margin: 20px auto 30px auto;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: #666;
+      font-size: 1.1rem;
+      font-weight: 400;
+      padding: 8px 16px;
+      transition: color 0.3s ease;
+      text-transform: capitalize;
+    }
+    .nav-link:hover { color: #5a5335; }
+    .nav-link.active { color: #5a5335; font-weight: 500; }
+
+    .content { max-width: 800px; margin: 0 auto; }
+
+    .page-divider {
+      width: 60px;
+      height: 2px;
+      background-color: #5a5335;
+      margin: 0 auto 40px auto;
+    }
+
+    .section { margin-bottom: 40px; }
+    .section-title {
+      color: #333;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .outreach-item { margin-bottom: 22px; }
+    .outreach-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    .outreach-title a {
+      color: #333;
+      text-decoration: none;  /* bold only, no underline */
+    }
+    .outreach-title a:hover { color: #5a5335; }
+
+    .outreach-meta {
+      color: #777;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+    .outreach-summary {
+      color: #444;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .page-title { font-size: 2rem; }
+      .navigation { gap: 25px; }
+      .nav-link { font-size: 1rem; }
+      .container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <!-- fixed top-left name -->
+      <div class="site-name">Bishal K Chalise</div>
+
+      <!-- page title -->
+      <h1 class="page-title">Outreach</h1>
+      <div class="divider"></div>
+
+      <!-- nav (CV removed; Outreach active) -->
+      <nav class="navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="teaching.html" class="nav-link">Teaching</a>
+        <a href="outreach.html" class="nav-link active">Outreach</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <div class="page-divider"></div>
+
+      <section class="section">
+        <h3 class="section-title">Articles (chronological)</h3>
+
+        <!-- 2016 -->
+        <div class="outreach-item">
+          <div class="outreach-title">
+            <a href="https://eastasiaforum.org/2016/03/09/aiib-to-unlock-south-asias-economic-potential/" target="_blank" rel="noopener">
+              AIIB to unlock South Asia’s economic potential
+            </a>
+          </div>
+          <div class="outreach-meta">East Asia Forum — 9 March 2016</div>
+          <div class="outreach-summary">
+            Argues that the Asian Infrastructure Investment Bank (AIIB) can catalyse regional integration and growth in South Asia by easing infrastructure bottlenecks—provided trust is built and multi-country oversight is maintained.
+          </div>
+        </div>
+
+        <!-- 2017 -->
+        <div class="outreach-item">
+          <div class="outreach-title">
+            <a href="https://eastasiaforum.org/2017/06/17/chinas-belt-and-road-reaches-nepal/" target="_blank" rel="noopener">
+              China’s Belt and Road reaches Nepal
+            </a>
+          </div>
+          <div class="outreach-meta">East Asia Forum — 17 June 2017</div>
+          <div class="outreach-summary">
+            Explains Nepal’s enthusiasm for the BRI as a diversification strategy after the 2015 blockade, while noting limited concrete plans, ecological risks in the Himalaya, and the likelihood of repackaged projects and geopolitical pushback.
+          </div>
+        </div>
+
+        <!-- 2018 -->
+        <div class="outreach-item">
+          <div class="outreach-title">
+            <a href="https://www.livemint.com/Opinion/J7LlSME8pqmAxAS8ZFJExO/Nepals-uncertain-transition-to-federalism.html" target="_blank" rel="noopener">
+              Nepal’s uncertain transition to federalism
+            </a>
+          </div>
+          <div class="outreach-meta">Mint (Livemint) — 18 June 2018</div>
+          <div class="outreach-summary">
+            Reviews Nepal’s move to a three-tier federal system and highlights unresolved issues in power-sharing, fiscal devolution and administrative staffing that risk muddling accountability during the transition.
+          </div>
+        </div>
+
+        <!-- 2019 -->
+        <div class="outreach-item">
+          <div class="outreach-title">
+            <a href="https://www.hindustantimes.com/analysis/india-should-deliver-on-its-projects-in-nepal-not-worry-about-nepal-joining-the-bri/story-cDnyZ8n23QEQDGVPB7O3GO.html" target="_blank" rel="noopener">
+              India should deliver on its projects in Nepal, not worry about Nepal joining the BRI
+            </a>
+          </div>
+          <div class="outreach-meta">Hindustan Times — 14 May 2019</div>
+          <div class="outreach-summary">
+            Urges India to prioritise timely delivery of its own commitments—border infrastructure, trade facilitation and investment linkages—rather than treating Nepal’s BRI engagement as a zero-sum contest with China.
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
+</body>
+</html>
