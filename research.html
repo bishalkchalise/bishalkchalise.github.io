@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bishal K Chalise - Research</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    }
 
     body {
       font-family: 'Roboto', Arial, sans-serif;
@@ -20,27 +24,27 @@
       padding: 40px 20px;
     }
 
-    /* 2) small grey name top-left */
-.site-name {
-  font-size: 1.95rem;        /* double your current ~1rem */
-  font-weight: 200;       /* keep thin */
-  color: #B8860B;            /* darker grey (vs #888) */
-  position: fixed;        /* pin to viewport */
-  top: 15px;
-  left: 20px;
-  z-index: 1000;          /* stays above other elements */
-}
+    /* Site name - top left */
+    .site-name {
+      font-size: 1.95rem;
+      font-weight: 200;
+      color: #B8860B;
+      position: fixed;
+      top: 15px;
+      left: 20px;
+      z-index: 1000;
+    }
 
     .header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
       position: relative;
     }
 
-    /* 1) Big page title */
+    /* Page title */
     .page-title {
       font-size: 2.5rem;
-      color: #5a5335; /* darker than #a0956b */
+      color: #5a5335;
       margin-bottom: 20px;
       text-align: center;
       font-weight: 400;
@@ -54,9 +58,7 @@
       margin: 20px auto 30px auto;
     }
 
-    .paper { margin-bottom: 2.5rem; }
-
-
+    /* Navigation */
     .navigation {
       display: flex;
       justify-content: center;
@@ -65,14 +67,6 @@
       flex-wrap: wrap;
     }
 
-    .coauthor-inline {
-  color: #666;          /* dark grey */
-  font-weight: normal;
-  margin-left: 6px;
-  font-size: 0.95em;
-}
-
-    
     .nav-link {
       text-decoration: none;
       color: #666;
@@ -82,12 +76,26 @@
       transition: color 0.3s ease;
       text-transform: capitalize;
     }
-    .nav-link:hover { color: #5a5335; }
-    .nav-link.active { color: #5a5335; font-weight: 500; }
+    
+    .nav-link:hover { 
+      color: #5a5335; 
+    }
+    
+    .nav-link.active { 
+      color: #5a5335; 
+      font-weight: 500; 
+    }
 
-    .content { max-width: 800px; margin: 0 auto; }
+    /* Content area */
+    .content { 
+      max-width: 800px; 
+      margin: 0 auto; 
+    }
 
-    .section { margin-bottom: 50px; }
+    /* Section styling */
+    .section { 
+      margin-bottom: 60px; 
+    }
 
     .section-title {
       color: #333;
@@ -96,13 +104,17 @@
       font-weight: 500;
     }
 
-    .paper { margin-bottom: 30px; line-height: 1.6; }
+    /* Paper styling */
+    .paper { 
+      margin-bottom: 35px; 
+      line-height: 1.7;
+    }
 
-    /* 4) Paper titles bold only */
     .paper-title {
       font-weight: 600;
       color: #333;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
     }
 
     .paper-title a {
@@ -110,64 +122,96 @@
       text-decoration: none;
       font-weight: 600;
     }
-    .paper-title a:hover { color: #5a5335; }
+    
+    .paper-title a:hover { 
+      color: #5a5335; 
+    }
 
+    /* Co-author inline styling */
+    .coauthor-inline {
+      color: #666;
+      font-weight: normal;
+      margin-left: 6px;
+      font-size: 0.95em;
+    }
+
+    /* Paper details */
     .paper-details {
       color: #555;
-      margin-bottom: 8px;
-    }
-
-    .coauthor { font-style: italic; }
-
-    .coauthor-inline {
-  color: #666;
-  font-weight: normal;
-  margin-left: 6px;
-  font-size: 0.95em;
-}
-
-.paper {
-  margin-bottom: 2.5rem;
-}
-
-.paper-details a {
-  color: #0056b3;
-  text-decoration: none;
-}
-
-.paper-details a:hover {
-  text-decoration: underline;
-}
-
-    .paper-details { font-size: 0.95rem; }
-
-
-    /* Citation style */
-    .citation {
+      margin-bottom: 10px;
       font-size: 0.95rem;
-      color: #444;
     }
-    .citation i { font-style: italic; }
 
+    .coauthor { 
+      font-style: italic;
+      color: #666;
+    }
+
+    /* Links in paper details */
+    .paper-details a {
+      color: #B8860B;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .paper-details a:hover {
+      color: #5a5335;
+    }
+
+    /* Work in progress - project list styling */
+    .project-list {
+      margin-top: 10px;
+    }
+
+    .project-item {
+      margin-bottom: 15px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .project-item:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #5a5335;
+      font-weight: bold;
+    }
+
+    /* Responsive design */
     @media (max-width: 768px) {
-      .page-title { font-size: 2rem; }
-      .navigation { gap: 25px; }
-      .nav-link { font-size: 1rem; }
-      .container { padding: 20px 15px; }
+      .page-title { 
+        font-size: 2rem; 
+      }
+      
+      .navigation { 
+        gap: 25px; 
+      }
+      
+      .nav-link { 
+        font-size: 1rem; 
+      }
+      
+      .container { 
+        padding: 20px 15px; 
+      }
+      
+      .site-name {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header class="header">
-      <!-- 2) Small site name top-left -->
+      <!-- Site name top-left -->
       <div class="site-name">Bishal K Chalise</div>
 
-      <!-- 1) Big page title -->
+      <!-- Page title -->
       <h1 class="page-title">Research</h1>
       <div class="divider"></div>
 
-      <!-- 3) Updated navigation -->
+      <!-- Navigation -->
       <nav class="navigation">
         <a href="index.html" class="nav-link">Home</a>
         <a href="research.html" class="nav-link active">Research</a>
@@ -176,134 +220,147 @@
       </nav>
     </header>
 
-   <main class="content">
-  <section class="section">
-    <h3 class="section-title">Working Papers</h3>
-
-    <!-- Paper 1 -->
-    <div class="paper">
-      <div class="paper-title">
-        Blueprints of Bias: Partisan Politics in Post-Disaster Housing Reconstruction
-        <span class="coauthor-inline">(with Hemant Pullabhotla and Mehmet Ulubasoglu)</span>
-      </div>
-
-      <div class="paper-details">
-        <span class="coauthor">Abstract</span>
-      </div>
-
-      <div class="paper-details">
-        Partisan bias favouring local politicians aligned with the ruling national party can result in the misallocation of public resources. We examine how such bias operates when institutional safeguards are in place, focusing on disaster recovery allocation in Nepal. Utilising a close-election regression discontinuity design and administrative data covering the entire population of nearly a million beneficiary households and 2.3 million grant payments from an earthquake housing reconstruction program, we demonstrate that ruling-party-aligned local politicians enroll up to 36 percent more beneficiaries, with additional enrollments concentrated in poor rural regions and areas most severely damaged by the earthquake. Higher enrollment operates primarily through a grievance redressal mechanism in which ruling areas register significantly more applications reflecting higher constituent expectations. However, identical acceptance rates across political affiliations indicate that ruling politicians respond to greater demand without bending program rules. Despite evidence of strategic targeting, this partisan advantage yields no measurable electoral returns.
-      </div>
-    </div>
-
-    <!-- Paper 2 -->
-    <div class="paper">
-      <div class="paper-title">
-        Devolution, Diversity and Disorder
-      </div>
-
-      <div class="paper-details">
-        <span class="coauthor">Abstract</span>
-      </div>
-
-      <div class="paper-details">
-The ethnic conflict literature has primarily emphasized the opportunity cost channel, where income shocks alter incentives for violent engagement. In contrast, the "state-as-a-prize" mechanism remains underexplored due to identification challenges. This paper exploits two complementary constitutional reforms in Nepal: the 2015 devolution of substantial fiscal resources to local governments through central transfers, and the 2017 municipal boundary restructuring that generated exogenous variation in ethnic diversity. We find that ethnic polarisation and fractionalisation shape conflict through distinct mechanisms. Polarisation increases new conflict emergence by 54 percentage points and drives violent confrontations, whilst fractionalisation raises overall conflict incidence by 45\% but reduces onset risk. Conflict intensity rises significantly in fractionalised municipalities with larger per-capita fiscal transfers, consistent with rent-seeking over private goods rather than public provision. Ethnicity-based discrimination proves highly mobilising, though its effect depends on diversity structure: discrimination consolidates conflict in polarised settings but fragments collective action where fractionalisation is high. Democratic representation offers difussion of unrest in fragmented municipalities but majority control intensifies violence in polarised ones.
-      </div>
-    </div>
-
-    <!-- Paper 3 -->
-    <div class="paper">
-      <div class="paper-title">
-        International Migration and Structural Transformation
-        <span class="coauthor-inline">(with Mushfiq Mobarak)</span>
-      </div>
-
-      <div class="paper-details">
-        <span class="coauthor">Abstract</span>
-      </div>
-
-      <div class="paper-details">
-This paper examines international labour migration as a driver of local structural transformation through its effects on remittances flow  to migrant-sending economies. Using a shift–share instrumental variable design that combines historical municipality-level migration exposure with destination-country exchange rate fluctuations, we identify that favourable exchange rate shocks increase remittance inflows by up to 21 percent, leading to improved household living standards through asset accumulation and access to modern amenities. These gains coincide with reduced household engagement in agricultural practices and substantial labour reallocation towards the service sector. Municipalities with higher migration exposure exhibit greater enterprise presence, especially in non-tradable service sector. However, this expansion appears driven primarily by remittance-induced consumption demand rather than productivity improvements. The findings suggest that while remittances enhance household welfare, they do not necessarily boost local productive capacity, underscoring the limits of remittances' long-term transformational role.
-      </div>
-    </div>
-
-    <!-- Paper 4 -->
-    <div class="paper">
-      <div class="paper-title">
-        The Impact of Telemedicine Use on Prices and Service Provision in General Practice
-        <span class="coauthor-inline">(with Daniel Avdic, Paul Amores and Susan Méndez)</span>
-      </div>
-
-      <div class="paper-details">
-        <span class="coauthor">Abstract</span>
-      </div>
-
-      <div class="paper-details">
-        The COVID-19 pandemic accelerated the adoption of telemedicine, significantly transforming healthcare delivery, financing, and market dynamics in primary care. While prior research has focused on access and quality, this study examines its effects on general practitioners’ financial outcomes in a system with unregulated pricing. Using detailed GP survey data and an instrumental variables approach leveraging Google mobility data, we find that telemedicine adoption does not change service volume but increases fees for both face-to-face and telemedicine consultations. While higher face-to-face costs are largely borne by patients, telemedicine price increases are primarily subsidised by the government. These results suggest that telemedicine reshapes pricing incentives without clear improvements in access or quality.
-      </div>
-    </div>
-
-    <!-- Paper 5 -->
-    <div class="paper">
-      <div class="paper-title">
-        No Pain No Gain? The Price of Attracting Foreign Capital
-      </div>
-
-      <div class="paper-details">
-        <span class="coauthor">Abstract</span>
-      </div>
-
-      <div class="paper-details">
-        Developing countries sign DTAs to attract foreign investment, often at the cost of foregone tax revenue. This paper revisits whether such trade-offs pay off using granular data on annual investment inflows from 90 countries to Nepal between 1990 and 2020. Using a synthetic difference-in-differences approach within a staggered adoption framework, we find no meaningful difference in FDI between countries with and without DTAs. A sector-specific analysis further shows that Nepal forgoes approximately NRs. 635 million (US$5 million) annually in the airline sector alone due to DTA provisions.
-      </div>
-    </div>
-
-  </section>
-</main>
-
-
+    <main class="content">
+      <!-- Working Papers Section -->
       <section class="section">
-        <h3 class="section-title">Pre-Phd Publication</h3>
+        <h3 class="section-title">Working Papers</h3>
 
+        <!-- Paper 1 -->
         <div class="paper">
-  <div class="paper-title">
-    Local Education Financing in Nepal
-  </div>
+          <div class="paper-title">
+            Blueprints of Bias: Partisan Politics in Post-Disaster Housing Reconstruction
+            <span class="coauthor-inline">(with Hemant Pullabhotla and Mehmet Ulubasoglu)</span>
+          </div>
 
-  <div class="paper-details">
-    <span class="coauthor">Journal article</span>
-  </div>
+          <div class="paper-details">
+            <span class="coauthor">Abstract</span>
+          </div>
 
-  <div class="paper-details">
-    <em>Samaj Adhyayan Journal</em>, Martin Chautari, Kathmandu, 2021 (in Nepali).  
-    <br>
-    <a href="https://martinchautari.org.np/mc-publications/samaj-adhyayan-16" target="_blank">
-      Journal link
-    </a>
-  </div>
-</div>
+          <div class="paper-details">
+            Partisan bias favouring local politicians aligned with the ruling national party can result in the misallocation of public resources. We examine how such bias operates when institutional safeguards are in place, focusing on disaster recovery allocation in Nepal. Utilising a close-election regression discontinuity design and administrative data covering the entire population of nearly a million beneficiary households and 2.3 million grant payments from an earthquake housing reconstruction program, we demonstrate that ruling-party-aligned local politicians enroll up to 36 percent more beneficiaries, with additional enrollments concentrated in poor rural regions and areas most severely damaged by the earthquake. Higher enrollment operates primarily through a grievance redressal mechanism in which ruling areas register significantly more applications reflecting higher constituent expectations. However, identical acceptance rates across political affiliations indicate that ruling politicians respond to greater demand without bending program rules. Despite evidence of strategic targeting, this partisan advantage yields no measurable electoral returns.
+          </div>
+        </div>
 
+        <!-- Paper 2 -->
+        <div class="paper">
+          <div class="paper-title">
+            Devolution, Diversity and Disorder
+          </div>
 
-<div class="paper">
-  <div class="paper-title">
-    Where Is My Reusable Bag? Retailers' Bag Use Before and After the Plastic Bag Ban in Dharan Municipality of Nepal
-    <span class="coauthor-inline">(with Bhardwaj, B. and Subedi, M.)</span>
-  </div>
+          <div class="paper-details">
+            <span class="coauthor">Abstract</span>
+          </div>
 
-  <div class="paper-details">
-    <span class="coauthor">Journal article</span>
-  </div>
+          <div class="paper-details">
+            The ethnic conflict literature has primarily emphasized the opportunity cost channel, where income shocks alter incentives for violent engagement. In contrast, the "state-as-a-prize" mechanism remains underexplored due to identification challenges. This paper exploits two complementary constitutional reforms in Nepal: the 2015 devolution of substantial fiscal resources to local governments through central transfers, and the 2017 municipal boundary restructuring that generated exogenous variation in ethnic diversity. We find that ethnic polarisation and fractionalisation shape conflict through distinct mechanisms. Polarisation increases new conflict emergence by 54 percentage points and drives violent confrontations, whilst fractionalisation raises overall conflict incidence by 45\% but reduces onset risk. Conflict intensity rises significantly in fractionalised municipalities with larger per-capita fiscal transfers, consistent with rent-seeking over private goods rather than public provision. Ethnicity-based discrimination proves highly mobilising, though its effect depends on diversity structure: discrimination consolidates conflict in polarised settings but fragments collective action where fractionalisation is high. Democratic representation offers difussion of unrest in fragmented municipalities but majority control intensifies violence in polarised ones.
+          </div>
+        </div>
 
-  <div class="paper-details">
-    <em>Waste Management</em>, 2021.  
-    <br>
-    <a href="https://doi.org/10.1016/j.wasman.2020.10.019" target="_blank">
-      https://doi.org/10.1016/j.wasman.2020.10.019
-    </a>
-  </div>
-</div>
+        <!-- Paper 3 -->
+        <div class="paper">
+          <div class="paper-title">
+            International Migration and Structural Transformation
+            <span class="coauthor-inline">(with Mushfiq Mobarak)</span>
+          </div>
 
-        
+          <div class="paper-details">
+            <span class="coauthor">Abstract</span>
+          </div>
+
+          <div class="paper-details">
+            This paper examines international labour migration as a driver of local structural transformation through its effects on remittances flow to migrant-sending economies. Using a shift–share instrumental variable design that combines historical municipality-level migration exposure with destination-country exchange rate fluctuations, we identify that favourable exchange rate shocks increase remittance inflows by up to 21 percent, leading to improved household living standards through asset accumulation and access to modern amenities. These gains coincide with reduced household engagement in agricultural practices and substantial labour reallocation towards the service sector. Municipalities with higher migration exposure exhibit greater enterprise presence, especially in non-tradable service sector. However, this expansion appears driven primarily by remittance-induced consumption demand rather than productivity improvements. The findings suggest that while remittances enhance household welfare, they do not necessarily boost local productive capacity, underscoring the limits of remittances' long-term transformational role.
+          </div>
+        </div>
+
+        <!-- Paper 4 -->
+        <div class="paper">
+          <div class="paper-title">
+            The Impact of Telemedicine Use on Prices and Service Provision in General Practice
+            <span class="coauthor-inline">(with Daniel Avdic, Paul Amores and Susan Méndez)</span>
+          </div>
+
+          <div class="paper-details">
+            <span class="coauthor">Abstract</span>
+          </div>
+
+          <div class="paper-details">
+            The COVID-19 pandemic accelerated the adoption of telemedicine, significantly transforming healthcare delivery, financing, and market dynamics in primary care. While prior research has focused on access and quality, this study examines its effects on general practitioners' financial outcomes in a system with unregulated pricing. Using detailed GP survey data and an instrumental variables approach leveraging Google mobility data, we find that telemedicine adoption does not change service volume but increases fees for both face-to-face and telemedicine consultations. While higher face-to-face costs are largely borne by patients, telemedicine price increases are primarily subsidised by the government. These results suggest that telemedicine reshapes pricing incentives without clear improvements in access or quality.
+          </div>
+        </div>
+
+        <!-- Paper 5 -->
+        <div class="paper">
+          <div class="paper-title">
+            No Pain No Gain? The Price of Attracting Foreign Capital
+          </div>
+
+          <div class="paper-details">
+            <span class="coauthor">Abstract</span>
+          </div>
+
+          <div class="paper-details">
+            Developing countries sign DTAs to attract foreign investment, often at the cost of foregone tax revenue. This paper revisits whether such trade-offs pay off using granular data on annual investment inflows from 90 countries to Nepal between 1990 and 2020. Using a synthetic difference-in-differences approach within a staggered adoption framework, we find no meaningful difference in FDI between countries with and without DTAs. A sector-specific analysis further shows that Nepal forgoes approximately NRs. 635 million (US$5 million) annually in the airline sector alone due to DTA provisions, which constitute 0.7 percent of the annual tax income.
+          </div>
+        </div>
+      </section>
+
+      <!-- Work in Progress Section -->
+      <section class="section">
+        <h3 class="section-title">Work in Progress</h3>
+
+        <div class="project-list">
+          <div class="project-item">
+            The Politics of Bargaining Within Coalitions: Evidence from Intergovernmental Fiscal Transfers
+          </div>
+
+          <div class="project-item">
+            Decentralized and Privatized? Local Governance and the Rise of Private Schooling
+          </div>
+
+          <div class="project-item">
+            State legitimacy after civil conflict
+          </div>
+        </div>
+      </section>
+
+      <!-- Pre-PhD Publication Section -->
+      <section class="section">
+        <h3 class="section-title">Pre-PhD Publication</h3>
+
+        <!-- Publication 1 -->
+        <div class="paper">
+          <div class="paper-title">
+            Local Education Financing in Nepal
+          </div>
+
+          <div class="paper-details">
+            <span class="coauthor">Journal article</span>
+          </div>
+
+          <div class="paper-details">
+            <em>Samaj Adhyayan Journal</em>, Martin Chautari, Kathmandu, 2021 (in Nepali).
+            <br>
+            <a href="https://martinchautari.org.np/mc-publications/samaj-adhyayan-16" target="_blank">Journal link</a>
+          </div>
+        </div>
+
+        <!-- Publication 2 -->
+        <div class="paper">
+          <div class="paper-title">
+            Where Is My Reusable Bag? Retailers' Bag Use Before and After the Plastic Bag Ban in Dharan Municipality of Nepal
+            <span class="coauthor-inline">(with Bhardwaj, B. and Subedi, M.)</span>
+          </div>
+
+          <div class="paper-details">
+            <span class="coauthor">Journal article</span>
+          </div>
+
+          <div class="paper-details">
+            <em>Waste Management</em>, 2021.
+            <br>
+            <a href="https://doi.org/10.1016/j.wasman.2020.10.019" target="_blank">https://doi.org/10.1016/j.wasman.2020.10.019</a>
+          </div>
+        </div>
       </section>
     </main>
   </div>
