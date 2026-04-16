@@ -3,350 +3,434 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bishal K Chalise - Research</title>
+
+  <!-- Primary SEO -->
+  <title>Research | Bishal K Chalise</title>
+  <meta name="description" content="Working papers, works in progress, and publications by Bishal K Chalise. Topics include partisan politics in disaster reconstruction, ethnic conflict, international migration, telemedicine, and foreign direct investment.">
+  <meta name="author" content="Bishal K Chalise">
+  <link rel="canonical" href="https://bishalkchalise.github.io/research.html">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bishalkchalise.github.io/research.html">
+  <meta property="og:title" content="Research | Bishal K Chalise">
+  <meta property="og:description" content="Working papers and publications by Bishal K Chalise on political economy, development economics, migration, and health.">
+  <meta property="og:image" content="https://bishalkchalise.github.io/photo.JPG">
+  <meta property="og:site_name" content="Bishal K Chalise">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@bishalkchalise">
+  <meta name="twitter:title" content="Research | Bishal K Chalise">
+  <meta name="twitter:description" content="Working papers and publications by Bishal K Chalise on political economy, development economics, migration, and health.">
+  <meta name="twitter:image" content="https://bishalkchalise.github.io/photo.JPG">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    * { 
-      margin: 0; 
-      padding: 0; 
-      box-sizing: border-box; 
+    /* ===== Custom Properties ===== */
+    :root {
+      --navy:       #1e3a5c;
+      --navy-hover: #2d5986;
+      --gold:       #b5860e;
+      --gold-hover: #976f0b;
+      --text:       #1a1a1a;
+      --text-muted: #555;
+      --border:     #e5dfd5;
+      --bg:         #ffffff;
+      --bg-warm:    #f7f5f1;
+      --radius:     6px;
+      --transition: 0.2s ease;
     }
+
+    /* ===== Reset ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Roboto', Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #ffffff;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    /* Site name - top left */
-    .site-name {
-      font-size: 1.95rem;
-      font-weight: 200;
-      color: #B8860B;
-      position: fixed;
-      top: 15px;
-      left: 20px;
-      z-index: 1000;
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 50px;
-      position: relative;
-    }
-
-    /* Page title */
-    .page-title {
-      font-size: 2.5rem;
-      color: #5a5335;
-      margin-bottom: 20px;
-      text-align: center;
-      font-weight: 400;
-      letter-spacing: 0.5px;
-    }
-
-    .divider {
-      width: 80px;
-      height: 3px;
-      background-color: #5a5335;
-      margin: 20px auto 30px auto;
-    }
-
-    /* Navigation */
-    .navigation {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-bottom: 50px;
-      flex-wrap: wrap;
-    }
-
-    .nav-link {
-      text-decoration: none;
-      color: #666;
-      font-size: 1.1rem;
-      font-weight: 400;
-      padding: 8px 16px;
-      transition: color 0.3s ease;
-      text-transform: capitalize;
-    }
-    
-    .nav-link:hover { 
-      color: #5a5335; 
-    }
-    
-    .nav-link.active { 
-      color: #5a5335; 
-      font-weight: 500; 
-    }
-
-    /* Content area */
-    .content { 
-      max-width: 800px; 
-      margin: 0 auto; 
-    }
-
-    /* Section styling */
-    .section { 
-      margin-bottom: 60px; 
-    }
-
-    .section-title {
-      color: #333;
-      font-size: 1.4rem;
-      margin-bottom: 30px;
-      font-weight: 500;
-    }
-
-    /* Paper styling */
-    .paper { 
-      margin-bottom: 35px; 
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
       line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
     }
+
+    a { color: var(--gold); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--gold-hover); text-decoration: underline; }
+
+    /* ===== Site Header ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 999;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-name {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      flex-shrink: 0;
+    }
+    .site-name:hover { color: var(--navy-hover); text-decoration: none; }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 4px;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 400;
+      padding: 6px 14px;
+      border-radius: var(--radius);
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: var(--navy); background: var(--bg-warm); text-decoration: none; }
+    .nav-links a.active { color: var(--navy); font-weight: 600; background: var(--bg-warm); }
+
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      color: var(--text);
+      line-height: 1;
+    }
+
+    /* ===== Page Layout ===== */
+    .page-main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 56px 32px 90px;
+    }
+
+    /* ===== Page Header ===== */
+    .page-header {
+      margin-bottom: 52px;
+    }
+
+    .page-title {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .page-divider {
+      width: 48px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    /* ===== Sections ===== */
+    .section { margin-bottom: 60px; }
+
+    .section-heading {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ===== Papers ===== */
+    .paper {
+      margin-bottom: 40px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--border);
+    }
+    .paper:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
     .paper-title {
       font-weight: 600;
-      color: #333;
-      margin-bottom: 8px;
-      font-size: 1.05rem;
+      font-size: 0.98rem;
+      color: var(--text);
+      line-height: 1.5;
+      margin-bottom: 4px;
     }
 
-    .paper-title a {
-      color: #B8860B;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    
-    .paper-title a:hover { 
-      color: #5a5335; 
-    }
+    .paper-title a { color: var(--gold); font-weight: 600; }
+    .paper-title a:hover { color: var(--gold-hover); }
 
-    /* Co-author inline styling */
-    .coauthor-inline {
-      color: #666;
-      font-weight: normal;
-      margin-left: 6px;
-      font-size: 0.95em;
-    }
-
-    /* Paper details */
-    .paper-details {
-      color: #555;
-      margin-bottom: 10px;
-      font-size: 0.95rem;
-    }
-
-    .coauthor { 
+    .paper-coauthors {
+      font-size: 0.88rem;
+      color: var(--text-muted);
       font-style: italic;
-      color: #666;
+      margin-bottom: 10px;
     }
 
-    /* Links in paper details */
-    .paper-details a {
-      color: #B8860B;
-      text-decoration: none;
-      transition: color 0.3s ease;
+    /* Abstract toggle */
+    .abstract-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.82rem;
+      color: var(--navy);
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      font-family: inherit;
+      font-weight: 500;
+      transition: color var(--transition);
     }
-
-    .paper-details a:hover {
-      color: #5a5335;
+    .abstract-toggle:hover { color: var(--navy-hover); }
+    .abstract-toggle .arrow {
+      display: inline-block;
+      transition: transform 0.2s;
+      font-style: normal;
+      font-size: 0.75rem;
     }
+    .abstract-toggle[aria-expanded="true"] .arrow { transform: rotate(90deg); }
 
-    /* Work in progress - project list styling */
-    .project-list {
+    .abstract-text {
+      display: none;
       margin-top: 10px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      padding-left: 14px;
+      border-left: 2px solid var(--border);
+    }
+    .abstract-text.open { display: block; }
+
+    /* Journal reference */
+    .paper-ref {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 6px;
     }
 
-    .project-item {
-      margin-bottom: 15px;
-      font-weight: 600;
-      color: #333;
-      font-size: 1.05rem;
+    /* ===== Work in Progress ===== */
+    .wip-item {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
     }
+    .wip-item:last-child { border-bottom: none; }
 
-    /* Responsive design */
-    @media (max-width: 768px) {
-      .page-title { 
-        font-size: 2rem; 
+    /* ===== Responsive ===== */
+    @media (max-width: 680px) {
+      .nav-inner { padding: 0 20px; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0; right: 0;
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        padding: 10px 16px 16px;
+        gap: 2px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.09);
       }
-      
-      .navigation { 
-        gap: 25px; 
-      }
-      
-      .nav-link { 
-        font-size: 1rem; 
-      }
-      
-      .container { 
-        padding: 20px 15px; 
-      }
-      
-      .site-name {
-        font-size: 1.5rem;
-      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 10px 14px; font-size: 0.98rem; }
+      .page-main { padding: 36px 20px 64px; }
+      .page-title { font-size: 1.75rem; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <!-- Site name top-left -->
-      <div class="site-name">Bishal K Chalise</div>
 
-      <!-- Page title -->
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="site-name">Bishal K Chalise</a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="navToggle">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="19" y2="6"/>
+          <line x1="3" y1="11" x2="19" y2="11"/>
+          <line x1="3" y1="16" x2="19" y2="16"/>
+        </svg>
+      </button>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html" class="active" aria-current="page">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="outreach.html">Outreach</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="page-main">
+
+    <div class="page-header">
       <h1 class="page-title">Research</h1>
-      <div class="divider"></div>
+      <div class="page-divider"></div>
+    </div>
 
-      <!-- Navigation -->
-      <nav class="navigation">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="research.html" class="nav-link active">Research</a>
-        <a href="teaching.html" class="nav-link">Teaching</a>
-        <a href="outreach.html" class="nav-link">Outreach</a>
-      </nav>
-    </header>
+    <!-- Working Papers -->
+    <section class="section" aria-labelledby="wp-heading">
+      <h2 class="section-heading" id="wp-heading">Working Papers</h2>
 
-    <main class="content">
-      <!-- Working Papers Section -->
-      <section class="section">
-        <h3 class="section-title">Working Papers</h3>
-
-        <!-- Paper 1 -->
-        <div class="paper">
-          <div class="paper-title">
-            Blueprints of Bias: Partisan Politics in Post-Disaster Housing Reconstruction
-            <span class="coauthor-inline">(with Hemant Pullabhotla and Mehmet Ulubasoglu)</span>
-          </div>
-
-          <div class="paper-details">
-            <span class="coauthor">Abstract</span>
-          </div>
-
-          <div class="paper-details">
-            Partisan bias favouring local politicians aligned with the ruling national party can result in the misallocation of public resources. We examine how such bias operates when institutional safeguards are in place, focusing on disaster recovery allocation in Nepal. Utilising a close-election regression discontinuity design and administrative data covering the entire population of nearly a million beneficiary households and 2.3 million grant payments from an earthquake housing reconstruction program, we demonstrate that ruling-party-aligned local politicians enroll up to 36 percent more beneficiaries, with additional enrollments concentrated in poor rural regions and areas most severely damaged by the earthquake. Higher enrollment operates primarily through a grievance redressal mechanism in which ruling areas register significantly more applications reflecting higher constituent expectations. However, identical acceptance rates across political affiliations indicate that ruling politicians respond to greater demand without bending program rules. Despite evidence of strategic targeting, this partisan advantage yields no measurable electoral returns.
-          </div>
+      <!-- Paper 1 -->
+      <article class="paper">
+        <div class="paper-title">
+          Blueprints of Bias: Partisan Politics in Post-Disaster Housing Reconstruction
         </div>
-
-        <!-- Paper 2 -->
-        <div class="paper">
-          <div class="paper-title">
-            Devolution, Diversity and Disorder
-          </div>
-
-          <div class="paper-details">
-            <span class="coauthor">Abstract</span>
-          </div>
-
-          <div class="paper-details">
-            The ethnic conflict literature has primarily emphasized the opportunity cost channel, where income shocks alter incentives for violent engagement. In contrast, the "state-as-a-prize" mechanism remains underexplored due to identification challenges. This paper exploits two complementary constitutional reforms in Nepal: the 2015 devolution of substantial fiscal resources to local governments through central transfers, and the 2017 municipal boundary restructuring that generated exogenous variation in ethnic diversity. We find that ethnic polarisation and fractionalisation shape conflict through distinct mechanisms. Polarisation increases new conflict emergence by 54 percentage points and drives violent confrontations, whilst fractionalisation raises overall conflict incidence by 45\% but reduces onset risk. Conflict intensity rises significantly in fractionalised municipalities with larger per-capita fiscal transfers, consistent with rent-seeking over private goods rather than public provision. Ethnicity-based discrimination proves highly mobilising, though its effect depends on diversity structure: discrimination consolidates conflict in polarised settings but fragments collective action where fractionalisation is high. Democratic representation offers difussion of unrest in fragmented municipalities but majority control intensifies violence in polarised ones.
-          </div>
+        <div class="paper-coauthors">with Hemant Pullabhotla and Mehmet Ulubasoglu</div>
+        <button class="abstract-toggle" aria-expanded="false" onclick="toggleAbstract(this)">
+          Abstract <span class="arrow" aria-hidden="true">&#9656;</span>
+        </button>
+        <div class="abstract-text">
+          Partisan bias favouring local politicians aligned with the ruling national party can result in the misallocation of public resources. We examine how such bias operates when institutional safeguards are in place, focusing on disaster recovery allocation in Nepal. Utilising a close-election regression discontinuity design and administrative data covering the entire population of nearly a million beneficiary households and 2.3 million grant payments from an earthquake housing reconstruction program, we demonstrate that ruling-party-aligned local politicians enroll up to 36 percent more beneficiaries, with additional enrollments concentrated in poor rural regions and areas most severely damaged by the earthquake. Higher enrollment operates primarily through a grievance redressal mechanism in which ruling areas register significantly more applications reflecting higher constituent expectations. However, identical acceptance rates across political affiliations indicate that ruling politicians respond to greater demand without bending program rules. Despite evidence of strategic targeting, this partisan advantage yields no measurable electoral returns.
         </div>
+      </article>
 
-        <!-- Paper 3 -->
-        <div class="paper">
-          <div class="paper-title">
-            International Migration and Structural Transformation
-            <span class="coauthor-inline">(with Mushfiq Mobarak)</span>
-          </div>
-
-          <div class="paper-details">
-            <span class="coauthor">Abstract</span>
-          </div>
-
-          <div class="paper-details">
-            This paper examines international labour migration as a driver of local structural transformation through its effects on remittances flow to migrant-sending economies. Using a shift–share instrumental variable design that combines historical municipality-level migration exposure with destination-country exchange rate fluctuations, we identify that favourable exchange rate shocks increase remittance inflows by up to 21 percent, leading to improved household living standards through asset accumulation and access to modern amenities. These gains coincide with reduced household engagement in agricultural practices and substantial labour reallocation towards the service sector. Municipalities with higher migration exposure exhibit greater enterprise presence, especially in non-tradable service sector. However, this expansion appears driven primarily by remittance-induced consumption demand rather than productivity improvements. The findings suggest that while remittances enhance household welfare, they do not necessarily boost local productive capacity, underscoring the limits of remittances' long-term transformational role.
-          </div>
+      <!-- Paper 2 -->
+      <article class="paper">
+        <div class="paper-title">
+          Devolution, Diversity and Disorder
         </div>
-
-        <!-- Paper 4 -->
-        <div class="paper">
-          <div class="paper-title">
-            The Impact of Telemedicine Use on Prices and Service Provision in General Practice
-            <span class="coauthor-inline">(with Daniel Avdic, Paul Amores and Susan Méndez)</span>
-          </div>
-
-          <div class="paper-details">
-            <span class="coauthor">Abstract</span>
-          </div>
-
-          <div class="paper-details">
-            The COVID-19 pandemic accelerated the adoption of telemedicine, significantly transforming healthcare delivery, financing, and market dynamics in primary care. While prior research has focused on access and quality, this study examines its effects on general practitioners' financial outcomes in a system with unregulated pricing. Using detailed GP survey data and an instrumental variables approach leveraging Google mobility data, we find that telemedicine adoption does not change service volume but increases fees for both face-to-face and telemedicine consultations. While higher face-to-face costs are largely borne by patients, telemedicine price increases are primarily subsidised by the government. These results suggest that telemedicine reshapes pricing incentives without clear improvements in access or quality.
-          </div>
+        <button class="abstract-toggle" aria-expanded="false" onclick="toggleAbstract(this)">
+          Abstract <span class="arrow" aria-hidden="true">&#9656;</span>
+        </button>
+        <div class="abstract-text">
+          The ethnic conflict literature has primarily emphasized the opportunity cost channel, where income shocks alter incentives for violent engagement. In contrast, the "state-as-a-prize" mechanism remains underexplored due to identification challenges. This paper exploits two complementary constitutional reforms in Nepal: the 2015 devolution of substantial fiscal resources to local governments through central transfers, and the 2017 municipal boundary restructuring that generated exogenous variation in ethnic diversity. We find that ethnic polarisation and fractionalisation shape conflict through distinct mechanisms. Polarisation increases new conflict emergence by 54 percentage points and drives violent confrontations, whilst fractionalisation raises overall conflict incidence by 45% but reduces onset risk. Conflict intensity rises significantly in fractionalised municipalities with larger per-capita fiscal transfers, consistent with rent-seeking over private goods rather than public provision. Ethnicity-based discrimination proves highly mobilising, though its effect depends on diversity structure: discrimination consolidates conflict in polarised settings but fragments collective action where fractionalisation is high. Democratic representation offers diffusion of unrest in fragmented municipalities but majority control intensifies violence in polarised ones.
         </div>
+      </article>
 
-        <!-- Paper 5 -->
-        <div class="paper">
-          <div class="paper-title">
-            No Pain No Gain? The Price of Attracting Foreign Capital
-            <span class="coauthor-inline">(with Umesh Rimal)</span>
-
-          </div>
-
-          <div class="paper-details">
-            <span class="coauthor">Abstract</span>
-          </div>
-
-          <div class="paper-details">
-            Developing countries sign DTAs to attract foreign investment, often at the cost of foregone tax revenue. This paper revisits whether such trade-offs pay off using granular data on annual investment inflows from 90 countries to Nepal between 1990 and 2020. Using a synthetic difference-in-differences approach within a staggered adoption framework, we find no meaningful difference in FDI between countries with and without DTAs. A sector-specific analysis further shows that Nepal forgoes approximately NRs. 635 million (US$5 million) annually in the airline sector alone due to DTA provisions, which constitute 0.7 percent of the annual tax income.
-          </div>
+      <!-- Paper 3 -->
+      <article class="paper">
+        <div class="paper-title">
+          International Migration and Structural Transformation
         </div>
-      </section>
-
-      <!-- Work in Progress Section -->
-      <section class="section">
-        <h3 class="section-title">Work in Progress</h3>
-
-        <div class="project-list">
-          <div class="project-item">
-            The Politics of Bargaining Within Coalitions: Evidence from Intergovernmental Fiscal Transfers
-          </div>
-
-          <div class="project-item">
-            Decentralised and Privatised? Local Governance and the Rise of Private Schooling
-          </div>
-
-      
+        <div class="paper-coauthors">with Mushfiq Mobarak</div>
+        <button class="abstract-toggle" aria-expanded="false" onclick="toggleAbstract(this)">
+          Abstract <span class="arrow" aria-hidden="true">&#9656;</span>
+        </button>
+        <div class="abstract-text">
+          This paper examines international labour migration as a driver of local structural transformation through its effects on remittances flow to migrant-sending economies. Using a shift&ndash;share instrumental variable design that combines historical municipality-level migration exposure with destination-country exchange rate fluctuations, we identify that favourable exchange rate shocks increase remittance inflows by up to 21 percent, leading to improved household living standards through asset accumulation and access to modern amenities. These gains coincide with reduced household engagement in agricultural practices and substantial labour reallocation towards the service sector. Municipalities with higher migration exposure exhibit greater enterprise presence, especially in non-tradable service sector. However, this expansion appears driven primarily by remittance-induced consumption demand rather than productivity improvements. The findings suggest that while remittances enhance household welfare, they do not necessarily boost local productive capacity, underscoring the limits of remittances' long-term transformational role.
         </div>
-      </section>
+      </article>
 
-      <!-- Pre-PhD Publication Section -->
-      <section class="section">
-        <h3 class="section-title">Pre-PhD Publication</h3>
-
-        <!-- Publication 1 -->
-        <div class="paper">
-          <div class="paper-title">
-            <a href="https://martinchautari.org.np/mc-publications/samaj-adhyayan-16" target="_blank">Local Education Financing in Nepal</a>
-          </div>
-
-                   <div class="paper-details">
-            <em>Samaj Adhyayan Journal</em>, Martin Chautari, Kathmandu, 2021 (in Nepali).
-          </div>
+      <!-- Paper 4 -->
+      <article class="paper">
+        <div class="paper-title">
+          The Impact of Telemedicine Use on Prices and Service Provision in General Practice
         </div>
-
-        <!-- Publication 2 -->
-        <div class="paper">
-          <div class="paper-title">
-            <a href="https://doi.org/10.1016/j.wasman.2020.10.019" target="_blank">Where Is My Reusable Bag? Retailers' Bag Use Before and After the Plastic Bag Ban in Dharan Municipality of Nepal</a>
-            <span class="coauthor-inline">(with Bhardwaj, B. and Subedi, M.)</span>
-          </div>
-
-    
-
-          <div class="paper-details">
-            <em>Waste Management</em>, 2021.
-          </div>
+        <div class="paper-coauthors">with Daniel Avdic, Paul Amores and Susan M&eacute;ndez</div>
+        <button class="abstract-toggle" aria-expanded="false" onclick="toggleAbstract(this)">
+          Abstract <span class="arrow" aria-hidden="true">&#9656;</span>
+        </button>
+        <div class="abstract-text">
+          The COVID-19 pandemic accelerated the adoption of telemedicine, significantly transforming healthcare delivery, financing, and market dynamics in primary care. While prior research has focused on access and quality, this study examines its effects on general practitioners' financial outcomes in a system with unregulated pricing. Using detailed GP survey data and an instrumental variables approach leveraging Google mobility data, we find that telemedicine adoption does not change service volume but increases fees for both face-to-face and telemedicine consultations. While higher face-to-face costs are largely borne by patients, telemedicine price increases are primarily subsidised by the government. These results suggest that telemedicine reshapes pricing incentives without clear improvements in access or quality.
         </div>
-      </section>
-    </main>
-  </div>
+      </article>
+
+      <!-- Paper 5 -->
+      <article class="paper">
+        <div class="paper-title">
+          No Pain No Gain? The Price of Attracting Foreign Capital
+        </div>
+        <div class="paper-coauthors">with Umesh Rimal</div>
+        <button class="abstract-toggle" aria-expanded="false" onclick="toggleAbstract(this)">
+          Abstract <span class="arrow" aria-hidden="true">&#9656;</span>
+        </button>
+        <div class="abstract-text">
+          Developing countries sign DTAs to attract foreign investment, often at the cost of foregone tax revenue. This paper revisits whether such trade-offs pay off using granular data on annual investment inflows from 90 countries to Nepal between 1990 and 2020. Using a synthetic difference-in-differences approach within a staggered adoption framework, we find no meaningful difference in FDI between countries with and without DTAs. A sector-specific analysis further shows that Nepal forgoes approximately NRs. 635 million (US$5 million) annually in the airline sector alone due to DTA provisions, which constitute 0.7 percent of the annual tax income.
+        </div>
+      </article>
+    </section>
+
+    <!-- Work in Progress -->
+    <section class="section" aria-labelledby="wip-heading">
+      <h2 class="section-heading" id="wip-heading">Work in Progress</h2>
+
+      <div class="wip-item">The Politics of Bargaining Within Coalitions: Evidence from Intergovernmental Fiscal Transfers</div>
+      <div class="wip-item">Decentralised and Privatised? Local Governance and the Rise of Private Schooling</div>
+    </section>
+
+    <!-- Pre-PhD Publications -->
+    <section class="section" aria-labelledby="pub-heading">
+      <h2 class="section-heading" id="pub-heading">Pre-PhD Publication</h2>
+
+      <article class="paper">
+        <div class="paper-title">
+          <a href="https://martinchautari.org.np/mc-publications/samaj-adhyayan-16" target="_blank" rel="noopener noreferrer">
+            Local Education Financing in Nepal
+          </a>
+        </div>
+        <div class="paper-ref"><em>Samaj Adhyayan Journal</em>, Martin Chautari, Kathmandu, 2021 (in Nepali).</div>
+      </article>
+
+      <article class="paper">
+        <div class="paper-title">
+          <a href="https://doi.org/10.1016/j.wasman.2020.10.019" target="_blank" rel="noopener noreferrer">
+            Where Is My Reusable Bag? Retailers' Bag Use Before and After the Plastic Bag Ban in Dharan Municipality of Nepal
+          </a>
+        </div>
+        <div class="paper-coauthors">with Bhardwaj, B. and Subedi, M.</div>
+        <div class="paper-ref"><em>Waste Management</em>, 2021.</div>
+      </article>
+    </section>
+
+  </main>
+
+  <script>
+    // Nav toggle
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', function() {
+      const open = links.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    });
+    links.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Abstract toggle
+    function toggleAbstract(btn) {
+      const text = btn.nextElementSibling;
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !expanded);
+      text.classList.toggle('open', !expanded);
+    }
+  </script>
+
 </body>
 </html>
