@@ -1,215 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bishal K Chalise - Outreach</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Outreach | Bishal K Chalise</title>
+  <meta name="description" content="Media articles and public outreach by Bishal K Chalise on Nepal's federalism, Belt and Road Initiative, post-earthquake reconstruction, and South Asian economic policy.">
+  <meta name="author" content="Bishal K Chalise">
+  <link rel="canonical" href="https://bishalkchalise.github.io/outreach.html">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bishalkchalise.github.io/outreach.html">
+  <meta property="og:title" content="Outreach | Bishal K Chalise">
+  <meta property="og:description" content="Media articles and public outreach by Bishal K Chalise in The Kathmandu Post, Hindustan Times, Mint, East Asia Forum, LSE South Asia Blog, and The Diplomat.">
+  <meta property="og:image" content="https://bishalkchalise.github.io/photo.JPG">
+  <meta property="og:site_name" content="Bishal K Chalise">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@bishalkchalise">
+  <meta name="twitter:title" content="Outreach | Bishal K Chalise">
+  <meta name="twitter:description" content="Media articles and public outreach by Bishal K Chalise in The Kathmandu Post, Hindustan Times, Mint, East Asia Forum, LSE South Asia Blog, and The Diplomat.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    /* ===== Custom Properties ===== */
+    :root {
+      --navy:       #1e3a5c;
+      --navy-hover: #2d5986;
+      --gold:       #b5860e;
+      --gold-hover: #976f0b;
+      --text:       #1a1a1a;
+      --text-muted: #555;
+      --border:     #e5dfd5;
+      --bg:         #ffffff;
+      --bg-warm:    #f7f5f1;
+      --radius:     6px;
+      --transition: 0.2s ease;
+    }
+
+    /* ===== Reset ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Roboto', Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #ffffff;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
     }
 
-    .container {
-      max-width: 900px;
+    a { color: var(--gold); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--gold-hover); text-decoration: underline; }
+
+    /* ===== Site Header ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 999;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    /* top-left subtle name (your preferred combo) */
-    .site-name {
-      font-size: 1.5rem;
-      font-weight: 200;
-      color: #888;
-      position: fixed;
-      top: 15px;
-      left: 20px;
-      z-index: 1000;
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 40px;
-      position: relative;
-    }
-
-    /* big page title */
-    .page-title {
-      font-size: 2.5rem;
-      color: #5a5335;
-      margin-bottom: 20px;
-      text-align: center;
-      font-weight: 400;
-      letter-spacing: 0.5px;
-    }
-
-    .divider {
-      width: 80px;
-      height: 3px;
-      background-color: #5a5335;
-      margin: 20px auto 30px auto;
-    }
-
-    .navigation {
+      padding: 0 32px;
+      height: 60px;
       display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-bottom: 50px;
-      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .nav-link {
+    .site-name {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
       text-decoration: none;
-      color: #666;
-      font-size: 1.1rem;
+      letter-spacing: 0.01em;
+      flex-shrink: 0;
+    }
+    .site-name:hover { color: var(--navy-hover); text-decoration: none; }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 4px;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
       font-weight: 400;
-      padding: 8px 16px;
-      transition: color 0.3s ease;
-      text-transform: capitalize;
+      padding: 6px 14px;
+      border-radius: var(--radius);
+      transition: all var(--transition);
+      text-decoration: none;
     }
-    .nav-link:hover { color: #5a5335; }
-    .nav-link.active { color: #5a5335; font-weight: 500; }
+    .nav-links a:hover { color: var(--navy); background: var(--bg-warm); text-decoration: none; }
+    .nav-links a.active { color: var(--navy); font-weight: 600; background: var(--bg-warm); }
 
-    .content { max-width: 800px; margin: 0 auto; }
-
-    .section { margin-bottom: 40px; }
-    .section-title {
-      color: #333;
-      font-size: 1.4rem;
-      margin-bottom: 20px;
-      font-weight: 500;
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      color: var(--text);
+      line-height: 1;
     }
 
-    .outreach-item { margin-bottom: 18px; }
+    /* ===== Page Layout ===== */
+    .page-main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 56px 32px 90px;
+    }
+
+    /* ===== Page Header ===== */
+    .page-header { margin-bottom: 52px; }
+
+    .page-title {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .page-divider {
+      width: 48px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    /* ===== Section ===== */
+    .section { margin-bottom: 60px; }
+
+    .section-heading {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 28px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ===== Outreach Items ===== */
+    .outreach-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .outreach-item:first-of-type { padding-top: 0; }
+    .outreach-item:last-child { border-bottom: none; }
+
     .outreach-title {
-      font-weight: 600;
-      margin-bottom: 4px;
-      line-height: 1.4;
+      font-size: 0.96rem;
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--text);
     }
+
     .outreach-title a {
-      color: #333;
-      text-decoration: none;  /* bold only, no underline */
+      color: var(--text);
+      text-decoration: none;
+      transition: color var(--transition);
     }
-    .outreach-title a:hover { color: #5a5335; }
+    .outreach-title a:hover {
+      color: var(--navy);
+      text-decoration: underline;
+    }
 
     .outreach-meta {
-      color: #777;
-      font-size: 0.95rem;
+      font-size: 0.83rem;
+      color: var(--text-muted);
     }
 
-    @media (max-width: 768px) {
-      .page-title { font-size: 2rem; }
-      .navigation { gap: 25px; }
-      .nav-link { font-size: 1rem; }
-      .container { padding: 20px 15px; }
+    .outlet-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--navy);
+      background: var(--bg-warm);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 1px 7px;
+      margin-right: 6px;
+      vertical-align: middle;
+      letter-spacing: 0.02em;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 680px) {
+      .nav-inner { padding: 0 20px; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0; right: 0;
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        padding: 10px 16px 16px;
+        gap: 2px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 10px 14px; font-size: 0.98rem; }
+      .page-main { padding: 36px 20px 64px; }
+      .page-title { font-size: 1.75rem; }
     }
   </style>
 </head>
 <body>
- <div class="container">
-    <header class="header">
-      <!-- Site name top-left -->
-      <div class="site-name">Bishal K Chalise</div>
 
-      <!-- page title -->
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="site-name">Bishal K Chalise</a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="navToggle">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="19" y2="6"/>
+          <line x1="3" y1="11" x2="19" y2="11"/>
+          <line x1="3" y1="16" x2="19" y2="16"/>
+        </svg>
+      </button>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="outreach.html" class="active" aria-current="page">Outreach</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="page-main">
+
+    <div class="page-header">
       <h1 class="page-title">Outreach</h1>
-      <div class="divider"></div>
+      <div class="page-divider"></div>
+    </div>
 
-      <!-- nav -->
-      <nav class="navigation">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="research.html" class="nav-link">Research</a>
-        <a href="teaching.html" class="nav-link">Teaching</a>
-        <a href="outreach.html" class="nav-link active">Outreach</a>
-      </nav>
-    </header>
+    <section class="section" aria-labelledby="media-heading">
+      <h2 class="section-heading" id="media-heading">Media Articles</h2>
 
-    <main class="content">
-      <section class="section">
-        <h3 class="section-title">Media Articles</h3>
-
-        <!-- 2019 -->
-        <div class="outreach-item">
-          <div class="outreach-title">
-            <a href="https://kathmandupost.com/columns/2019/10/16/structural-reforms-in-nepal-s-neighbouring-countries-have-brought-have-immense-changes" target="_blank" rel="noopener">
-              Structural reforms in Nepal’s neighbouring countries have brought immense changes
-            </a>
-          </div>
-          <div class="outreach-meta">The Kathmandu Post — 16 Oct 2019</div>
+      <article class="outreach-item">
+        <div class="outreach-title">
+          <a href="https://kathmandupost.com/columns/2019/10/16/structural-reforms-in-nepal-s-neighbouring-countries-have-brought-have-immense-changes" target="_blank" rel="noopener noreferrer">
+            Structural reforms in Nepal's neighbouring countries have brought immense changes
+          </a>
         </div>
-
-        <div class="outreach-item">
-          <div class="outreach-title">
-            <a href="https://www.hindustantimes.com/analysis/india-should-deliver-on-its-projects-in-nepal-not-worry-about-nepal-joining-the-bri/story-cDnyZ8n23QEQDGVPB7O3GO.html" target="_blank" rel="noopener">
-              India should deliver on its projects in Nepal, not worry about Nepal joining the BRI
-            </a>
-          </div>
-          <div class="outreach-meta">Hindustan Times — 14 May 2019</div>
+        <div class="outreach-meta">
+          <span class="outlet-tag">The Kathmandu Post</span> 16 Oct 2019
         </div>
+      </article>
 
-        <!-- 2018 -->
-        <div class="outreach-item">
-          <div class="outreach-title">
-            <a href="https://www.livemint.com/Opinion/J7LlSME8pqmAxAS8ZFJExO/Nepals-uncertain-transition-to-federalism.html" target="_blank" rel="noopener">
-              Nepal’s uncertain transition to federalism
-            </a>
-          </div>
-          <div class="outreach-meta">Mint (Livemint) — 18 Jun 2018</div>
+      <article class="outreach-item">
+        <div class="outreach-title">
+          <a href="https://www.hindustantimes.com/analysis/india-should-deliver-on-its-projects-in-nepal-not-worry-about-nepal-joining-the-bri/story-cDnyZ8n23QEQDGVPB7O3GO.html" target="_blank" rel="noopener noreferrer">
+            India should deliver on its projects in Nepal, not worry about Nepal joining the BRI
+          </a>
         </div>
-
-        <!-- 2017 -->
-        <div class="outreach-item">
-          <div class="outreach-title">
-            <a href="https://eastasiaforum.org/2017/06/17/chinas-belt-and-road-reaches-nepal/" target="_blank" rel="noopener">
-              China’s Belt and Road reaches Nepal
-            </a>
-          </div>
-          <div class="outreach-meta">East Asia Forum — 17 Jun 2017</div>
+        <div class="outreach-meta">
+          <span class="outlet-tag">Hindustan Times</span> 14 May 2019
         </div>
+      </article>
 
-        <!-- 2016 -->
-        <div class="outreach-item">
-          <div class="outreach-title">
-            <a href="https://blogs.lse.ac.uk/southasia/2016/05/03/community-participation-should-be-at-the-heart-of-nepals-post-earthquake-reconstruction-process/" target="_blank" rel="noopener">
-              Community participation should be at the heart of Nepal’s post-earthquake reconstruction process
-            </a>
-          </div>
-          <div class="outreach-meta">LSE South Asia Blog — 3 May 2016</div>
+      <article class="outreach-item">
+        <div class="outreach-title">
+          <a href="https://www.livemint.com/Opinion/J7LlSME8pqmAxAS8ZFJExO/Nepals-uncertain-transition-to-federalism.html" target="_blank" rel="noopener noreferrer">
+            Nepal's uncertain transition to federalism
+          </a>
         </div>
-
-        <div class="outreach-item">
-          <div class="outreach-title">
-            <a href="https://blogs.lse.ac.uk/southasia/2016/04/08/if-india-wants-a-meaningful-place-in-the-asian-century-it-must-act-big-and-act-now/" target="_blank" rel="noopener">
-              If India wants a meaningful place in the Asian century, it must act big and act now
-            </a>
-          </div>
-          <div class="outreach-meta">LSE South Asia Blog — 8 Apr 2016</div>
+        <div class="outreach-meta">
+          <span class="outlet-tag">Mint</span> 18 Jun 2018
         </div>
+      </article>
 
-        <div class="outreach-item">
-          <div class="outreach-title">
-            <a href="https://thediplomat.com/2016/04/can-thailand-avoid-the-middle-income-trap/" target="_blank" rel="noopener">
-              Can Thailand Avoid the Middle-Income Trap?
-            </a>
-          </div>
-          <div class="outreach-meta">The Diplomat — Apr 2016</div>
+      <article class="outreach-item">
+        <div class="outreach-title">
+          <a href="https://eastasiaforum.org/2017/06/17/chinas-belt-and-road-reaches-nepal/" target="_blank" rel="noopener noreferrer">
+            China's Belt and Road reaches Nepal
+          </a>
         </div>
-
-        <div class="outreach-item">
-          <div class="outreach-title">
-            <a href="https://eastasiaforum.org/2016/03/09/aiib-to-unlock-south-asias-economic-potential/" target="_blank" rel="noopener">
-              AIIB to unlock South Asia’s economic potential
-            </a>
-          </div>
-          <div class="outreach-meta">East Asia Forum — 9 Mar 2016</div>
+        <div class="outreach-meta">
+          <span class="outlet-tag">East Asia Forum</span> 17 Jun 2017
         </div>
+      </article>
 
-      </section>
-    </main>
-  </div>
+      <article class="outreach-item">
+        <div class="outreach-title">
+          <a href="https://blogs.lse.ac.uk/southasia/2016/05/03/community-participation-should-be-at-the-heart-of-nepals-post-earthquake-reconstruction-process/" target="_blank" rel="noopener noreferrer">
+            Community participation should be at the heart of Nepal's post-earthquake reconstruction process
+          </a>
+        </div>
+        <div class="outreach-meta">
+          <span class="outlet-tag">LSE South Asia Blog</span> 3 May 2016
+        </div>
+      </article>
+
+      <article class="outreach-item">
+        <div class="outreach-title">
+          <a href="https://blogs.lse.ac.uk/southasia/2016/04/08/if-india-wants-a-meaningful-place-in-the-asian-century-it-must-act-big-and-act-now/" target="_blank" rel="noopener noreferrer">
+            If India wants a meaningful place in the Asian century, it must act big and act now
+          </a>
+        </div>
+        <div class="outreach-meta">
+          <span class="outlet-tag">LSE South Asia Blog</span> 8 Apr 2016
+        </div>
+      </article>
+
+      <article class="outreach-item">
+        <div class="outreach-title">
+          <a href="https://thediplomat.com/2016/04/can-thailand-avoid-the-middle-income-trap/" target="_blank" rel="noopener noreferrer">
+            Can Thailand Avoid the Middle-Income Trap?
+          </a>
+        </div>
+        <div class="outreach-meta">
+          <span class="outlet-tag">The Diplomat</span> Apr 2016
+        </div>
+      </article>
+
+      <article class="outreach-item">
+        <div class="outreach-title">
+          <a href="https://eastasiaforum.org/2016/03/09/aiib-to-unlock-south-asias-economic-potential/" target="_blank" rel="noopener noreferrer">
+            AIIB to unlock South Asia's economic potential
+          </a>
+        </div>
+        <div class="outreach-meta">
+          <span class="outlet-tag">East Asia Forum</span> 9 Mar 2016
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', function() {
+      const open = links.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    });
+    links.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
 </body>
 </html>
